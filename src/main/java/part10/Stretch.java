@@ -9,5 +9,55 @@ package part10;
 // There is no main method here yet. Typing it is part of the stretch.
 
 public class Stretch {
+    public static void main(String[] args){
+        /* MY GUESS:
+        8
+        4
+        17
+        16 15 8 17
+        4
+        2 rows, 3 columns
+         */
+        int[] nums = {4, 8, 15, 16};
+        System.out.println(nums[1]);
+        System.out.println(nums.length);
+        nums[0] = nums[3] + 1;
+        System.out.println(nums[0]);
+        for (int i = nums.length - 1; i >= 0; i--){
+            System.out.print(nums[i] + " ");
+        }
+        System.out.println();
+        int[][] grid = {{1, 2, 3}, {4, 5, 6}};
+        System.out.println(grid[1][0]);
+        System.out.println(grid.length + " rows, " + grid[0].length + " columns");
 
+        //B1
+        String[] foods = {"chicken", "rice", "mac-n-cheese"};
+        for (int i = 0; i < foods.length; i++){
+            System.out.println("I like " + foods[i]);
+        }
+
+        //B2
+        int[] scores = {88, 92, 75, 100, 64};
+        int sum = 0;
+        for (int i = 0; i < scores.length; i++){
+            sum += scores[i];
+        }
+        double average = (double) sum / scores.length;
+        System.out.println("Total: " + sum);
+        System.out.println("Average: " + average);
+
+        //B3
+        String[][] seats = {
+                {"Ana", "Ben", "Cal"},
+                {"Dee", "Eli", "Fay"}
+        };
+        for (int i = 0; i < seats.length; i++){
+            System.out.print("Row " + (i + 1) + ":\t");
+            for (int j = 0; j < seats[i].length; j++){
+                System.out.print(seats[i][j] + " \t");
+            }
+            System.out.println();
+        }
+    }
 }
