@@ -1,4 +1,5 @@
 package part12;
+import java.util.ArrayList;
 
 // Video: https://www.youtube.com/watch?v=xk4_1vDrzzo&t=8637s
 //        starts at about 2:23:57 — stop at about 2:27:20, when he says "that is everything you need to know to get started with the for-each loop"
@@ -15,5 +16,22 @@ package part12;
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
 public class ForEachLoop {
+    public static void main(String[] args){
+        String[] animals = {"cat", "dog", "rat", "bird"};
+
+        for ( String i : animals){
+            System.out.println(i);
+        }
+        ArrayList<String> animalList = new ArrayList<String>();
+        animalList.add("cat");
+        animalList.add("dog");
+        animalList.add("rat");
+        animalList.add("bird");
+
+        for (String i : animalList){
+            System.out.println(i);
+        }
+
+    }
 
 }
