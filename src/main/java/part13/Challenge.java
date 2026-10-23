@@ -14,12 +14,24 @@ public class Challenge {
     // sign(-3) should return "negative"
     // sign(0)  should return "zero"
     public static String sign(int n) {
-        return "";   // YOUR CODE
+        if (n > 0){
+            return "positive";
+        } else if (n < 0){
+            return "negative";
+        } else {
+            return "zero";
+        }
     }
 
     // closerTo10(8, 13) should return 8    (8 is 2 away from 10, 13 is 3 away)
     // closerTo10(8, 12) should return 0    (a tie: both are 2 away)
     public static int closerTo10(int a, int b) {
-        return 0;   // YOUR CODE
+        if (Math.abs(a - 10) < Math.abs(b - 10)){
+            return a;
+        } else if (Math.abs(a - 10) > Math.abs(b - 10)){
+            return b;
+        } else {
+            return 0;
+        }
     }
 }
